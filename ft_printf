@@ -1,0 +1,26 @@
+#include <stdarg.h>
+
+int handle_format(char *format, va_list args)
+{
+	char c;
+	c = va_arg(args, int);
+}
+
+int ft_printf(const char format, ...)
+{
+	va_list args;
+	int counter;
+
+	counter = 0;
+	va_start(args, format);
+	// int ret = vprintf(format, args);
+	while(*format)
+	{
+		if(*format == '%')
+			format++;
+			counter +=handle_format(format, args, counter);
+	}
+	va_end(args);
+	return ret;
+
+}
