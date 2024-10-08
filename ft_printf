@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/08 10:54:48 by peatjohnsto       #+#    #+#             */
+/*   Updated: 2024/10/08 10:54:49 by peatjohnsto      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdarg.h>
 
 int handle_format(char *format, va_list args)
@@ -22,5 +34,4 @@ int ft_printf(const char format, ...)
 	}
 	va_end(args);
 	return ret;
-
 }
