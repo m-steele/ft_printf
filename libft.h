@@ -62,5 +62,8 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_ptoa(unsigned long pt);
+char	*ft_utoa(unsigned int u);
+char	*ft_itoupperhex(unsigned long num);
+char	*ft_itolowhex(unsigned long num);
 
 #endif // LIBFT_H
