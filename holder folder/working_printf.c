@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   working_printf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:41:17 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 13:31:01 by ekosnick         ###   ########.fr       */
+/*   Updated: 2024/10/15 10:21:53 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include <stdarg.h>
 #include "libft.h"
 
-static	int	process_id(va_list args)
+static	int process_id(va_list args)
 {
 	int			n;
 	int			i;
@@ -36,7 +36,7 @@ static	int	process_id(va_list args)
 	return (n);
 }
 
-static int	process_s(va_list args)
+static int process_s(va_list args)
 {
 	int		n;
 	char	*s;
@@ -54,17 +54,17 @@ static int	process_s(va_list args)
 	return (n);
 }
 
-static int	process_c(va_list args, char spec)
-{
-	char	c;
-
-	if (spec == 'c')
-		c = va_arg(args, int);
-	else
-		c = '%';
-	write(1, &c, 1);
-	return (1);
-}
+static int process_c(va_list args, char spec)
+	{
+		char	c;
+		
+		if (spec == 'c')
+			c = va_arg(args, int);
+		else
+			c = '%';
+		write(1, &c, 1);
+		return (1);
+	}
 
 int	type_ck(const char *str, va_list args)
 {
@@ -110,7 +110,7 @@ int	ft_printf(const char *str, ...)
 				n++;
 			}
 			else if (*str)
-				n += type_ck(str, args);
+				n +=type_ck (str, args);
 		}
 		else
 		{

@@ -6,7 +6,7 @@
 /*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:49:28 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/02 10:07:51 by ekosnick         ###   ########.fr       */
+/*   Updated: 2024/10/15 10:58:54 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-char	*ft_ptoa(unsigned long pt);
-char	*ft_utoa(unsigned int u);
-char	*ft_itoupperhex(unsigned long num);
-char	*ft_itolowhex(unsigned long num);
 
 #endif // LIBFT_H
