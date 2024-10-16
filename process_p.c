@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   process_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:17:53 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 13:30:46 by ekosnick         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:41:29 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include "libft.h"
 
 char	*ft_ptoa(unsigned long pt)

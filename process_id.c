@@ -1,64 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   process_u.c                                        :+:      :+:    :+:   */
+/*   process_id.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 10:12:43 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 15:41:47 by peatjohnsto      ###   ########.fr       */
+/*   Created: 2024/10/16 09:56:08 by peatjohnsto       #+#    #+#             */
+/*   Updated: 2024/10/16 10:08:47 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-char	*ft_utoa(unsigned int u)
+unsigned int	process_id(va_list args)
 {
-	char			*str;
-	int				len;
-	unsigned int	ut;
-
-	ut = u;
-	len = 0;
-	if (u == 0)
-		return (ft_strdup("0"));
-	while (ut)
-	{
-		ut /= 10;
-		len ++;
-	}
-	str = (char *)malloc(len + 1);
-	if (!str)
-		return (0);
-	str[len] = '\0';
-	while (len--)
-	{
-		str[len] = (u % 10) + '0';
-		u /= 10;
-	}
-	return (str);
-}
-
-unsigned int	process_u(va_list args)
-{
-	unsigned int	n;
-	unsigned int	u;
-	char			*u_s;
-	char			*s;
+	int			n;
+	int			i;
+	char		*i_s;
+	char		*s;
 
 	n = 0;
-	u = va_arg(args, int);
-	u_s = ft_utoa(u);
-	if (!u_s)
-		u_s = "(NULL)";
-	s = u_s;
+	i = va_arg(args, int);
+	i_s = ft_itoa(i);
+	if (!i_s)
+		i_s = "(NULL)";
+	s = i_s;
 	while (*s)
 	{
 		write(1, s, 1);
 		s++;
 		n++;
 	}
-	free(u_s);
+	free(i_s);
 	return (n);
 }
