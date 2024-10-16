@@ -21,7 +21,7 @@ int main()
 	ft_printf("printf returned using ft_printf: %d\n", printf_count);
 	printf("\033[0m\n\n");
 
-	ft_printf("\033[1;33m");
+	ft_printf("\033[1;36m");
 	int ft_printf_count = ft_printf(test_str, s0, s1, num, perc, ptr, usint, hexlow, hexupp);
 	printf("ft_printf returned using printf: %d\n", ft_printf_count);
 	ft_printf("ft_printf returned using ft_printf: %d\n", ft_printf_count);
