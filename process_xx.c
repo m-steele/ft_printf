@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   process_xx.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:51:25 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 15:42:17 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 13:24:49 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "ft_printf.h"
 #include "libft.h"
 
@@ -49,10 +50,14 @@ unsigned int	process_xx(va_list args)
 
 	n = 0;
 	xx = va_arg(args, int);
-	xx_s = ft_itoupperhex(xx);
+	// if (xx == 0)
+	// 	xx_s ="0";
+	// else
+		xx_s = ft_itoupperhex(xx);
 	if (!xx_s)
-		xx_s = "(NULL)";
+		xx_s = "(null)";
 	s = xx_s;
+// printf("HERE %s\n", s);
 	while (*s)
 	{
 		write(1, s, 1);

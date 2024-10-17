@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:58:42 by peatjohnsto       #+#    #+#             */
-/*   Updated: 2024/10/16 10:09:59 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 12:17:53 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned int	process_s(va_list args)
 	n = 0;
 	s = va_arg(args, char *);
 	if (!s)
-		s = "(NULL)";
+		s = "(null)";
 	while (*s)
 	{
 		write(1, s, 1);

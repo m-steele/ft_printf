@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   process_x.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:06:46 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 15:42:09 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 14:02:02 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "ft_printf.h"
 #include "libft.h"
 
@@ -28,6 +29,8 @@ char	*ft_itolowhex(unsigned long num)
 		x /= 16;
 		len++;
 	}
+	if (num == 0)
+		len = 1;
 	str = (char *)malloc(len + 1);
 	if (!str)
 		return (0);
@@ -46,12 +49,14 @@ unsigned int	process_x(va_list args)
 	unsigned int	x;
 	char			*x_s;
 	char			*s;
+	int				should_free;
 
 	n = 0;
 	x = va_arg(args, int);
 	x_s = ft_itolowhex(x);
 	if (!x_s)
-		x_s = "(NULL)";
+		x_s = "(null)";
+	should_free = (x != 0);
 	s = x_s;
 	while (*s)
 	{
@@ -59,6 +64,7 @@ unsigned int	process_x(va_list args)
 		s++;
 		n++;
 	}
-	free(x_s);
+	if (should_free)
+		free(x_s);
 	return (n);
 }

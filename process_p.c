@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:17:53 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 15:41:29 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 12:25:48 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	process_p(va_list args)
 	p = va_arg(args, void *);
 	p_s = ft_ptoa((unsigned long)p);
 	if (!p_s)
-		p_s = "(NULL)";
+		p_s = "(null)";
 	s = p_s;
 	write(1, "0x", 2);
 	n += 2;

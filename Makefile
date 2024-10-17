@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+         #
+#    By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 09:52:59 by ekosnick          #+#    #+#              #
-#    Updated: 2024/10/16 15:29:20 by peatjohnsto      ###   ########.fr        #
+#    Updated: 2024/10/17 10:55:12 by ekosnick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@
 CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
+
+LIB = ./libft/libft.a
 
 #source 'c' and object 'o' files
 NAME = libftprintf.a
