@@ -6,12 +6,11 @@
 /*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:12:43 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/15 15:41:47 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 16:47:24 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 char	*ft_utoa(unsigned int u)
 {

@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   process_c.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 10:00:48 by peatjohnsto       #+#    #+#             */
-/*   Updated: 2024/10/17 16:54:00 by peatjohnsto      ###   ########.fr       */
+/*   Created: 2024/09/18 10:29:56 by ekosnick          #+#    #+#             */
+/*   Updated: 2024/10/02 13:51:05 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-unsigned int	process_c(va_list args, char spec)
+size_t	ft_strlen(const char *str)
 {
-	char	c;
+	size_t	i;
 
-	if (spec == 'c')
-		c = va_arg(args, int);
-	else
-		c = '%';
-	write(1, &c, 1);
-	return (1);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

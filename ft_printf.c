@@ -6,12 +6,11 @@
 /*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:41:17 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/16 13:42:06 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 16:59:44 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	type_ck(const char *str, va_list args)
 {

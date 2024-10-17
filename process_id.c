@@ -6,12 +6,11 @@
 /*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 09:56:08 by peatjohnsto       #+#    #+#             */
-/*   Updated: 2024/10/16 10:08:47 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 16:54:04 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 unsigned int	process_id(va_list args)
 {

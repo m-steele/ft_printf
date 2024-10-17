@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   process_x.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:06:46 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/17 14:02:02 by ekosnick         ###   ########.fr       */
+/*   Updated: 2024/10/17 16:47:38 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "ft_printf.h"
-#include "libft.h"
 
 char	*ft_itolowhex(unsigned long num)
 {
