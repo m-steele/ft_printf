@@ -6,14 +6,15 @@
 #    By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 09:52:59 by ekosnick          #+#    #+#              #
-#    Updated: 2024/10/16 11:46:31 by peatjohnsto      ###   ########.fr        #
+#    Updated: 2024/10/16 15:29:20 by peatjohnsto      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #compliler and flags
 CC = cc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
+
 #source 'c' and object 'o' files
 NAME = libftprintf.a
 SRCS =	ft_printf.c \
