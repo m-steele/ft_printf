@@ -6,7 +6,7 @@
 /*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:06:46 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/17 16:47:38 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/17 17:43:47 by peatjohnsto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,3 +66,28 @@ unsigned int	process_x(va_list args)
 		free(x_s);
 	return (n);
 }
+
+// char	*ft_itolowhex(unsigned long num)
+// {
+// 	char			*str;
+// 	char			*hex;
+// 	unsigned long	x;
+// 	int				len;
+
+// 	hex = "0123456789abcdef";
+// 	if (num == 0)
+// 		return (ft_strdup("0")); // Return "0" directly if num is 0
+// 	x = num;
+// 	len = 1;
+// 	while (x /= 16)
+// 		len++;
+// 	if (!(str = (char *)malloc(len + 1)))
+// 		return (0);
+// 	str[len] = '\0';
+// 	while (len--)
+// 	{
+// 		str[len] = hex[num % 16];
+// 		num /= 16;
+// 	}
+// 	return (str);
+// }
