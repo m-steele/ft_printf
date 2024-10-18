@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+        */
+/*   By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 10:17:53 by ekosnick          #+#    #+#             */
-/*   Updated: 2024/10/17 16:54:08 by peatjohnsto      ###   ########.fr       */
+/*   Updated: 2024/10/18 12:23:06 by ekosnick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_ptoa(unsigned long pt)
 	int				len;
 
 	base = "0123456789abcdef";
+	if (pt == 0)
+		return (ft_strdup("0"));
 	p = pt;
 	len = 0;
 	while (p)
@@ -48,6 +50,8 @@ int	process_p(va_list args)
 
 	n = 0;
 	p = va_arg(args, void *);
+	if (p == NULL)
+		return (write(1, "(nil)", 5));
 	p_s = ft_ptoa((unsigned long)p);
 	if (!p_s)
 		p_s = "(null)";

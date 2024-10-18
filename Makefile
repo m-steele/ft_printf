@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: peatjohnston <peatjohnston@student.42.f    +#+  +:+       +#+         #
+#    By: ekosnick <ekosnick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 09:52:59 by ekosnick          #+#    #+#              #
-#    Updated: 2024/10/17 17:13:40 by peatjohnsto      ###   ########.fr        #
+#    Updated: 2024/10/18 12:30:06 by ekosnick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS =	ft_printf.c \
 		process_p.c process_u.c process_x.c process_xx.c \
 		process_id.c process_s.c process_c.c \
-		ft_itoa.c ft_strdup.c ft_strlen.c ft_strjoin.c
+		ft_itoa.c ft_strdup.c ft_strlen.c \
+		ft_strjoin.c
 
 OBJ = $(SRCS:.c=.o)
 NAME = libftprintf.a
